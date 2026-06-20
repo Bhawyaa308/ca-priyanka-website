@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1A2F3D;
+    background-color: #F7F1E6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block bg-navy text-ivory font-nav font-medium px-8 py-3.5 tracking-wide text-sm transition-all duration-300 hover:bg-dark-navy;
+  }
+
+  .btn-secondary {
+    @apply inline-block border-2 border-navy text-navy font-nav font-medium px-8 py-3.5 tracking-wide text-sm transition-all duration-300 hover:bg-navy hover:text-ivory;
+  }
+
+  .btn-beige {
+    @apply inline-block bg-beige text-navy font-nav font-semibold px-10 py-4 tracking-wide text-sm transition-all duration-300 hover:bg-[#E0D5C4];
+  }
+
+  .section-title {
+    @apply font-heading text-5xl md:text-6xl lg:text-[4rem] font-semibold text-navy leading-tight;
+  }
+
+  .section-subtitle {
+    @apply font-body text-base md:text-lg text-text-body max-w-2xl leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
